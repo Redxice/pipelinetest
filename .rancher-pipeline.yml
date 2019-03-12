@@ -5,4 +5,8 @@ stages:
       dockerfilePath: ./Dockerfile
       buildContext: .
       tag: php-test:v1
+    when:
+      event:
+        include:
+        - push
 timeout: 60
