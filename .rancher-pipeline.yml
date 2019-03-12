@@ -5,11 +5,16 @@ stages:
       dockerfilePath: ./Dockerfile
       buildContext: .
       tag: php-test:v1
+      registry: 127.0.0.1:34846
     when:
       event: {}
   when:
     event:
       include:
       - push
+- name: deployment
+  steps:
+  - applyYamlConfig:
+      path: ./deployment.yml
 timeout: 60
 branch: {}
