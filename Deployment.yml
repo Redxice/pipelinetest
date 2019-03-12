@@ -1,0 +1,38 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: pipelinetest-service
+spec:
+  selector:
+    app: pipelinetest
+  type:
+    NodePort
+  ports:
+    - protocol: TCP
+      port: 80
+      tergetPort: 80
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+   name: pipelinetest-server
+  labels:
+    app: pipelinetest
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pipelinetest
+  template:
+    metadata:
+      labels:
+        app: pipelinetest
+    spec:
+      imagePullSecrets:
+      - name: pipeline-docker-registry
+      containers:
+      - name: pipelinetest
+        image: php-test:v1
+        ports:
+        - containerPort: 80
+
