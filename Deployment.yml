@@ -28,7 +28,7 @@ spec:
         app: pipelinetest
     spec:
       imagePullSecrets:
-      - name: pipeline-docker-registry
+      - name: p-s698v-dockerregistryps698vpipeline
       containers:
       - name: pipelinetest
         image: php-test:v1
