@@ -4,7 +4,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: php-test
+      tag: php-test:latest
       registry: 127.0.0.1:34846
     when:
       event: {}
