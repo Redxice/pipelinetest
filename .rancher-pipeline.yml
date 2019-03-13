@@ -5,13 +5,11 @@ stages:
       dockerfilePath: ./Dockerfile
       buildContext: .
       tag: testteretest:latest
-      registry: 127.0.0.1:34846
+      registry: index.docker.io
     when:
       event: {}
   when:
-    event:
-      include:
-      - push
+    event: {}
 - name: deployment
   steps:
   - applyYamlConfig:
