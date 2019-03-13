@@ -18,6 +18,6 @@ spec:
       - name: pipeline-docker-registry
       containers:
       - name: php
-        image: ${CICD_IMAGE}:${CICD_EXECUTION_SEQUENCE}
+        image: ${CICD_IMAGE}:latest
         ports:
         - containerPort: 80
