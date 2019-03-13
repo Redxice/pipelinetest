@@ -4,7 +4,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: php-test:v1
+      tag: php-test
       registry: 127.0.0.1:34846
     when:
       event: {}
@@ -17,4 +17,6 @@ stages:
   - applyYamlConfig:
       path: ./Deployment.yml
 timeout: 60
-branch: {}
+branch:
+  include:
+  - master
