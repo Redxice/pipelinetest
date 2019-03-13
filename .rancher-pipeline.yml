@@ -6,7 +6,7 @@ stages:
       buildContext: .
       tag: testteretest:latest
       pushRemote: true
-      registry: 127.0.0.1:34846
+      registry: index.docker.io
     when:
       event: {}
   when:
