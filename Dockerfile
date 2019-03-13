@@ -1,4 +1,4 @@
-FROM nginx:latest
+FROM nginx
 
 COPY reporter /var/www
 COPY site.conf /etc/nginx/conf.d/site.conf
