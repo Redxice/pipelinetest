@@ -10,9 +10,7 @@ stages:
     when:
       event: {}
   when:
-    event:
-      include:
-      - push
+    event: {}
 - name: deployment
   steps:
   - applyYamlConfig:
