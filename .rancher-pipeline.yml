@@ -4,7 +4,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: /redxice/testteretest:latest
+      tag: redxice/testteretest:latest
       pushRemote: true
       registry: index.docker.io
     when:
