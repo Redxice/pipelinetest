@@ -5,7 +5,6 @@ stages:
       dockerfilePath: ./Dockerfile
       buildContext: .
       tag: testteretest:latest
-      pushRemote: true
       registry: index.docker.io
     when:
       event: {}
