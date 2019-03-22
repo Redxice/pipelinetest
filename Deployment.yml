@@ -15,7 +15,7 @@ spec:
         app: php-example
     spec:
       imagePullSecrets:
-      - name: redxice
+      - name: pipeline-docker-registry
       containers:
       - name: php
         image: ${CICD_IMAGE}:latest
